@@ -1,1 +1,36 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import 'tailwindcss';
+
+@import '@/styles/general/variables.css';
+@import '@/styles/general/fonts.css';
+@import '@/styles/general/utility.css';
+
+@import '@/styles/ui/buttons.css';
+@import '@/styles/ui/inputs.css';
+@import '@/styles/ui/badges.css';
+
+@import '@/styles/nav/header.css';
+@import '@/styles/nav/footer.css';
+
+@import '@/styles/sections/hero.css';
+@import '@/styles/sections/orders.css';
+@import '@/styles/sections/logos.css';
+@import '@/styles/sections/contact.css';
+@import '@/styles/sections/faq.css';
+
+@utility wrapper {
+	@apply container mx-auto;
+}
+
+@utility wrapper-wide {
+	@apply mx-auto;
+    max-width: 1440px;
+}
+
+img {
+	webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}

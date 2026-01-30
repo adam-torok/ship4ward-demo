@@ -1,0 +1,13 @@
+.logos--section {
+    @apply wrapper my-12 lg:my-24 mx-auto flex flex-col justify-center items-center;
+
+    .logos--section-title {
+        @apply text-small mb-6 lg:mb-8 text-[var(--text-color-base)] text-center;
+    }
+}
+
+.logos--section-items {
+    @apply w-full px-4 lg:px-8 flex items-center;
+
+    @apply flex-wrap justify-center gap-8 lg:flex-nowrap lg:justify-between lg:gap-0;
+}

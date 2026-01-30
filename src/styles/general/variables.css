@@ -1,0 +1,18 @@
+@theme {
+	--font-family-base: 'Inter', sans-serif;
+	--font-weight-semibold: 600;
+	--font-weight-medium: 500;
+	--font-weight-regular: 400;
+
+	--primary-color: #ff8d28;
+	--primary-medium: #FFD7B3;
+	--primary-soft: #FFEDDE;
+	--panel-color: #F5F5F5;
+
+	--text-color-dark: #252B37;
+	--text-color-darker: #181D27;
+	--text-color-base: #535862;
+
+	--border-radius-base: 8px;
+	--border-radius-big: 16px;
+}

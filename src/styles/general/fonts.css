@@ -1,0 +1,97 @@
+* {
+	font-family: var(--font-family-base);
+}
+
+@utility heading {
+	font-family: var(--font-family-base);
+	font-weight: var(--font-weight-semibold);
+	font-size: 60px;
+	line-height: 1;
+	color: inherit;
+}
+
+@utility secondary-heading {
+	font-family: var(--font-family-base);
+	font-weight: var(--font-weight-semibold);
+	font-size: 36px;
+	line-height: 1;
+	color: inherit;
+}
+
+@utility third-heading {
+	font-family: var(--font-family-base);
+	font-weight: var(--font-weight-semibold);
+	color: var(--text-color-darker);
+	font-size: 30px;
+	line-height: 1;
+	color: inherit;
+}
+
+@utility fourth-heading {
+	font-family: var(--font-family-base);
+	font-weight: var(--font-weight-medium);
+	color: var(--text-color-darker);
+	font-size: 20px;
+	line-height: 1;
+	color: inherit;
+}
+
+@utility support-text {
+	font-family: var(--font-family-base);
+	font-weight: var(--font-weight-regular);
+	font-size: 20px;
+	line-height: 1.5;
+}
+
+@utility support-text-small {
+	font-weight: var(--font-weight-regular);
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+@utility text {
+	font-weight: var(--font-weight-medium);
+	font-size: 18px;
+}
+
+@utility text-regular {
+	font-weight: var(--font-weight-regular);
+	color: var(--text-color-base);
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+@utility text-small {
+	font-weight: var(--font-weight-medium);
+	font-size: 16px;
+}
+
+@utility badge {
+	font-weight: var(--font-weight-medium);
+	font-size: 14px;
+	line-height: 20px;
+}
+
+@utility subtext {
+	font-weight: var(--font-weight-regular);
+	font-size: 16px;
+}
+
+@utility footer-heading {
+	font-weight: var(--font-weight-medium);
+	font-size: 14px;
+	color: #717680;
+    margin-bottom: 4px;
+}
+
+@utility footer-item {
+	font-weight: var(--font-weight-semibold);
+	font-size: 16px;
+	color: var(--text-color-base);
+
+}
+
+@utility container-padding {
+	padding: 96px 0px;
+}
+

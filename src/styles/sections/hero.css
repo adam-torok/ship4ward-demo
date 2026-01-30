@@ -1,0 +1,31 @@
+.hero--section {
+    @apply wrapper grid grid-cols-2 py-[27px] px-8 bg-[var(--panel-color)] max-h-[calc(579px-80px)];
+
+    .hero--section-content {
+        @apply flex flex-col gap-5;
+
+        h1 {
+            @apply heading text-[var(--text-color-darker)];
+        }
+
+        p {
+            @apply support-text text-[var(--text-color-base)];
+        }
+    }
+
+    .hero--section-left {
+        @apply flex flex-col gap-8 max-w-[596px];
+    }
+
+    .hero--section-right {
+        @apply relative flex h-[484px] bg-[url('@/assets/ui/dots.png')];
+
+        #image-boy {
+            @apply  absolute left-30;
+        }
+
+        #image-girl {
+            @apply w-[306px] h-[517px] absolute left-0;
+        }
+    }
+}

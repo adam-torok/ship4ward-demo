@@ -1,0 +1,47 @@
+.faq--section {
+    @apply wrapper flex flex-col py-12 lg:py-24 px-8 gap-10 lg:gap-16;
+}
+
+.faq--section-title {
+    @apply max-w-3xl mx-auto lg:mx-0 text-center lg:text-left;
+
+    h2 {
+        @apply secondary-heading text-[var(--text-color-darker)] mb-5;
+    }
+
+    p {
+        @apply support-text text-[var(--text-color-base)];
+    }
+}
+
+.faq--section-items {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 lg:gap-y-16 gap-x-8;
+}
+
+.faq--section-item {
+    @apply flex flex-col items-start gap-2;
+
+    h3 {
+        @apply text text-[var(--text-color-darker)];
+    }
+
+    p {
+        @apply subtext text-[var(--text-color-base)];
+    }
+}
+
+.faq--section-jumbotron {
+    @apply flex flex-col lg:flex-row lg:justify-between items-center h-auto lg:h-[130px] p-6 lg:p-8 bg-[var(--panel-color)] rounded-[var(--border-radius-big)] gap-6 lg:gap-0;
+
+    .faq--section-content {
+        @apply flex flex-col justify-center gap-2 text-center lg:text-left items-center lg:items-start;
+    }
+
+    h4 {
+        @apply fourth-heading;
+    }
+
+    p {
+        @apply text-regular;
+    }
+}

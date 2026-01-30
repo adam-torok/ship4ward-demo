@@ -1,0 +1,23 @@
+.contact--section {
+    @apply flex-center flex-column;
+
+    .contact--section-title {
+        @apply wrapper flex-center flex-column mx-auto p-24 text-center;
+
+        span {
+            @apply subtext text-[var(--primary-color)] text-center mb-3;
+        }
+
+        h3 {
+            @apply heading text-[var(--text-color-darker)] mb-6;
+        }
+
+        p {
+            @apply support-text text-[var(--text-color-base)];
+        }
+    }
+
+    .contact--section-map {
+        @apply max-w-5xl;
+    }
+}

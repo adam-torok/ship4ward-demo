@@ -1,0 +1,15 @@
+.badge {
+    @apply py-1.5 pl-1.5 pr-2.5 rounded-[var(--border-radius-big)] w-fit;
+}
+
+.badge--primary {
+    @apply flex items-center bg-[var(--primary-soft)];
+}
+
+.badge--text {
+    @apply text-[var(--primary-color)] mr-1;
+}
+
+.badge--inner {
+    @apply border border-[#FFD7B3] py-0.5 px-2.5 bg-white rounded-[var(--border-radius-big)] text-[var(--primary-color)] mr-[var(--border-radius-big)];
+}

@@ -1,0 +1,19 @@
+.header {
+    @apply h-20;
+
+    .header--nav {
+        @apply wrapper px-8 flex items-center justify-between h-full bg-[var(--panel-color)];
+    }
+
+    .header--nav-content {
+        @apply flex;
+    }
+
+    .header--nav-logo {
+        @apply mr-8;
+    }
+
+    .header--nav-items {
+        @apply flex items-center gap-5;
+    }
+}
