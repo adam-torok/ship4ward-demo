@@ -2,6 +2,7 @@ import flagHungary from '@/assets/ui/flag-hungary.svg';
 import flagGermany from '@/assets/ui/flag-germany.svg';
 import { OrderStat } from '../components/sections/OrderStat';
 import { CountrySelect } from '../components/inputs/CountrySelect';
+import { Fade } from 'react-awesome-reveal';
 
 const orderStats = [
     {
@@ -30,27 +31,32 @@ export const Orders = () => {
     return (
         <section className="orders--section">
             <header className="orders--section-title">
-                <span>Launch faster</span>
-                <h2>
-                    Trusted by thousands of global shoppers
-                </h2>
-                <p>We deliver packages from anywhere in the world directly to your doorstep or closest locker fast, secure and hassle-free.</p>
+                <Fade direction="up" triggerOnce cascade damping={0.2}>
+                    <span>Launch faster</span>
+                    <h2>
+                        Trusted by thousands of global shoppers
+                    </h2>
+                    <p>We deliver packages from anywhere in the world directly to your doorstep or closest locker fast, secure and hassle-free.</p>
+                </Fade>
             </header>
 
             <div className="orders--section-content">
                 <ul className="orders--section-stats">
-                    {orderStats.map((stat, index) => (
-                        <OrderStat
-                            key={index}
-                            value={stat.value}
-                            label={stat.label}
-                            description={stat.description}
-                        />
-                    ))}
+                    <Fade triggerOnce cascade damping={0.1} duration={500}>
+                        {orderStats.map((stat, index) => (
+                            <OrderStat
+                                key={index}
+                                value={stat.value}
+                                label={stat.label}
+                                description={stat.description}
+                            />
+                        ))}
+                    </Fade>
                 </ul>
 
                 <div className="orders--section-form">
-                    <CountrySelect
+                    <div>
+                        <CountrySelect
                             id="based"
                             label="I’m based in"
                             flagSrc={flagHungary}
@@ -58,7 +64,9 @@ export const Orders = () => {
                             countryCode="HU"
                             hint="We will deliver your parcel near you"
                         />
+                    </div>
 
+                    <div>
                         <CountrySelect
                             id="from"
                             label="My parcel from"
@@ -67,6 +75,7 @@ export const Orders = () => {
                             countryCode="DE"
                             hint="We are working together with most of the providers"
                         />
+                    </div>
 
                     <button className="button--primary">
                         Start the journey

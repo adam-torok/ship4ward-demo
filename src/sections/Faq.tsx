@@ -1,4 +1,5 @@
 import { FaqItem } from "../components/sections/FaqItem";
+import { Fade } from "react-awesome-reveal";
 
 const faqData = [
     {
@@ -38,13 +39,15 @@ export const Faq = () => {
             </header>
 
             <div className="faq--section-items">
-                {faqData.map((faq, index) => (
-                    <FaqItem
-                        key={index}
-                        question={faq.question}
-                        answer={faq.answer}
-                    />
-                ))}
+                <Fade triggerOnce duration={ 300 } cascade>
+                    {faqData.map((faq, index) => (
+                        <FaqItem
+                            key={index}
+                            question={faq.question}
+                            answer={faq.answer}
+                        />
+                    ))}
+                </Fade>
             </div>
 
             <div className="faq--section-jumbotron">

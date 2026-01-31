@@ -1,3 +1,4 @@
+import { Fade } from "react-awesome-reveal";
 import logoLayers from '@/assets/logos/logo-1.svg';
 import logoSisyphus from '@/assets/logos/logo-2.svg';
 import logoCircooles from '@/assets/logos/logo-3.svg';
@@ -16,19 +17,24 @@ export const Logos = () => {
     return (
         <section className="logos--section">
             <header className="logos--section-title">
-                Join 4,000+ companies already growing
+                <Fade triggerOnce>
+                    Join 4,000+ companies already growing
+                </Fade>
             </header>
 
             <div className="logos--section-items">
-                {partners.map((partner) => (
-                    <img
-                        height="auto"
-                        width="auto"
-                        key={partner.name}
-                        src={partner.src}
-                        alt={`${partner.name} logo`}
-                    />
-                ))}
+                <Fade cascade damping={0.1} direction="up" triggerOnce>
+                    {partners.map((partner) => (
+                        <img
+                            height="auto"
+                            width="auto"
+                            key={partner.name}
+                            src={partner.src}
+                            alt={`${partner.name} logo`}
+                            className="hover:opacity-100 transition-opacity duration-300"
+                        />
+                    ))}
+                </Fade>
             </div>
         </section>
     );
