@@ -1,19 +1,54 @@
 .header {
-    @apply h-20;
+    @apply h-[var(--navbar-height)] fixed top-0 z-50 w-full;
 
     .header--nav {
-        @apply wrapper px-8 flex items-center justify-between h-full bg-[var(--panel-color)];
+        @apply wrapper px-4 lg:px-8 flex items-center justify-between h-full bg-[var(--panel-color)];
     }
 
     .header--nav-content {
-        @apply flex;
+        @apply flex items-center;
     }
 
     .header--nav-logo {
         @apply mr-8;
+
+        img {
+            @apply h-8 w-auto;
+        }
     }
 
     .header--nav-items {
-        @apply flex items-center gap-5;
+        @apply hidden lg:flex items-center gap-5;
+
+        li {
+            a {
+                @apply text-base font-semibold transition-colors;
+                color: var(--text-color-base);
+
+                &:hover {
+                    color: var(--primary-color, #ff8d28);
+                }
+            }
+        }
+    }
+
+    .header--mobile-menu {
+        @apply wrapper right-0 left-0 absolute m-auto w-full bg-white border-t border-gray-100 shadow-lg p-6 flex flex-col gap-4 lg:hidden;
+        @apply origin-top animate-[fade-in_0.2s_ease-out];
+
+        li {
+            a {
+                @apply block py-2 text-lg font-medium;
+                color: var(--text-color-base);
+            }
+        }
+    }
+
+    .header--toggle-btn {
+        @apply p-2 ml-4 lg:hidden text-[var(--text-color-base)];
+    }
+
+    .header--nav-avatar {
+        @apply ml-auto lg:ml-0;
     }
 }
