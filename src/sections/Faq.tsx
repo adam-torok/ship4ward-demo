@@ -1,3 +1,32 @@
+import { FaqItem } from "@/components/sections/FaqItem";
+
+const faqData = [
+    {
+        question: "Is there a free trial available?",
+        answer: "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible."
+    },
+    {
+        question: "Can I change my plan later?",
+        answer: "Of course. Our pricing scales with your company. Chat to our friendly team to find a solution that works for you."
+    },
+    {
+        question: "What is your cancellation policy?",
+        answer: "We understand that things change. You can cancel your plan at any time and we’ll refund you the difference already paid."
+    },
+    {
+        question: "Can other info be added to an invoice?",
+        answer: "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible."
+    },
+    {
+        question: "How does billing work?",
+        answer: "Plans are per workspace, not per account. You can upgrade one workspace, and still have any number of free workspaces."
+    },
+    {
+        question: "How do I change my account email?",
+        answer: "You can change the email address associated with your account by going to untitled.com/account from a laptop or desktop."
+    }
+];
+
 export const Faq = () => {
     return (
         <section className="faq--section">
@@ -5,52 +34,17 @@ export const Faq = () => {
                 <h2>
                     FAQs
                 </h2>
-
                 <p>Everything you need to know about the product and billing. Can’t find the answer you’re looking for? Please chat to our friendly team.</p>
             </header>
 
             <div className="faq--section-items">
-                <div className="faq--section-content">
-                    <div className="faq--section-item">
-                        <h3>Is there a free trial available?</h3>
-                        <p>Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.</p>
-                    </div>
-                </div>
-
-                <div className="faq--section-content">
-                    <div className="faq--section-item">
-                        <h3>Can I change my plan later?</h3>
-                        <p>Of course. Our pricing scales with your company. Chat to our friendly team to find a solution that works for you.</p>
-                    </div>
-                </div>
-
-                <div className="faq--section-content">
-                    <div className="faq--section-item">
-                        <h3>What is your cancellation policy?</h3>
-                        <p>We understand that things change. You can cancel your plan at any time and we’ll refund you the difference already paid.</p>
-                    </div>
-                </div>
-
-                <div className="faq--section-content">
-                    <div className="faq--section-item">
-                        <h3>Can other info be added to an invoice?</h3>
-                        <p>Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.</p>
-                    </div>
-                </div>
-
-                <div className="faq--section-content">
-                    <div className="faq--section-item">
-                        <h3>How does billing work?</h3>
-                        <p>Plans are per workspace, not per account. You can upgrade one workspace, and still have any number of free workspaces.</p>
-                    </div>
-                </div>
-
-                <div className="faq--section-content">
-                    <div className="faq--section-item">
-                        <h3>How do I change my account email?</h3>
-                        <p>You can change the email address associated with your account by going to untitled.com/account from a laptop or desktop.</p>
-                    </div>
-                </div>
+                {faqData.map((faq, index) => (
+                    <FaqItem
+                        key={index}
+                        question={faq.question}
+                        answer={faq.answer}
+                    />
+                ))}
             </div>
 
             <div className="faq--section-jumbotron">
@@ -60,9 +54,9 @@ export const Faq = () => {
                 </div>
 
                 <div>
-                    <div className="button--primary">
+                    <button className="button--primary">
                         Get in touch
-                    </div>
+                    </button>
                 </div>
             </div>
         </section>

@@ -17,7 +17,7 @@
         }
 
         h3 {
-            @apply text my-2 lg:my-3;
+            @apply text my-2 lg:my-3 text-[var(--text-color-darker)];
         }
 
         p {
@@ -37,7 +37,7 @@
         }
 
         p {
-            @apply support-text;
+            @apply support-text text-[var(--text-color-base)];
         }
     }
 }

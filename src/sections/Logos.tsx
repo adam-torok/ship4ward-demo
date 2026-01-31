@@ -4,6 +4,13 @@ import logoCircooles from '@/assets/logos/logo-3.png';
 import logoCatalog from '@/assets/logos/logo-4.png';
 import logoQuotient from '@/assets/logos/logo-5.png';
 
+const partners = [
+    { name: 'Layers', src: logoLayers },
+    { name: 'Sisyphus', src: logoSisyphus },
+    { name: 'Circooles', src: logoCircooles },
+    { name: 'Catalog', src: logoCatalog },
+    { name: 'Quotient', src: logoQuotient },
+];
 
 export const Logos = () => {
     return (
@@ -13,11 +20,13 @@ export const Logos = () => {
             </header>
 
             <div className="logos--section-items">
-                <img width="auto" height="48px" src={logoLayers} alt="img" />
-                <img width="auto" height="48px" src={logoSisyphus}  alt="img" />
-                <img width="auto" height="48px" src={logoCircooles}  alt="img" />
-                <img width="auto" height="48px" src={logoCatalog}  alt="img" />
-                <img width="auto" height="48px" src={logoQuotient}  alt="img" />
+                {partners.map((partner) => (
+                    <img
+                        key={partner.name}
+                        src={partner.src}
+                        alt={`${partner.name} logo`}
+                    />
+                ))}
             </div>
         </section>
     );

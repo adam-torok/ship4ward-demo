@@ -1,5 +1,5 @@
 .buttons--container {
-	@apply flex flex-column md:flex-row gap-2 md:gap-5;
+	@apply flex flex-column lg:flex-row gap-2 md:gap-5;
 
 	.button--primary, .button--secondary{
 		@apply w-full;

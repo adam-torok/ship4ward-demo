@@ -1,31 +1,34 @@
 .hero--section {
-    @apply wrapper md:grid grid-cols-2 py-[27px] pt-[calc(27px+var(--navbar-height))] px-8 bg-[var(--panel-color)] max-h-none lg:max-h-[calc(579px-80px)];
+	@apply wrapper lg:grid grid-cols-2 py-[27px] pt-[calc(27px+var(--navbar-height))] px-8 bg-[var(--panel-color)] max-h-none lg:max-h-[calc(579px-20px)];
 
-    .hero--section-content {
-        @apply flex flex-col gap-5;
+	.hero--section-content {
+		@apply flex flex-col gap-5;
 
-        h1 {
-            @apply heading text-[var(--text-color-darker)];
-        }
+		h1 {
+			@apply heading text-[var(--text-color-darker)];
+		}
 
-        p {
-            @apply support-text text-[var(--text-color-base)];
-        }
-    }
+		p {
+			@apply support-text text-[var(--text-color-base)];
+		}
+	}
 
-    .hero--section-left {
-        @apply flex flex-col gap-8 max-w-[596px];
-    }
+	.hero--section-left {
+		@apply flex flex-col gap-8 lg:max-w-[596px];
+	}
 
-    .hero--section-right {
-        @apply hidden lg:flex md:relative flex h-[484px] bg-[url('@/assets/ui/dots.png')];
+	.hero--section-right {
+		@apply hidden lg:flex md:relative flex h-[484px] bg-[url('@/assets/ui/dots.png')];
+		background-position: -70px -30px;
+		background-repeat: no-repeat;
+		background-size: auto;
 
-        #image-boy {
-            @apply  md:absolute md:left-30;
-        }
+		#image-boy {
+			@apply md:absolute md:left-30 md:top-[-25px];
+		}
 
-        #image-girl {
-            @apply w-[306px] h-[517px] absolute left-0;
-        }
-    }
+		#image-girl {
+			@apply w-[306px] h-[517px] absolute left-0;
+		}
+	}
 }

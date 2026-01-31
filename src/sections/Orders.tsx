@@ -1,5 +1,30 @@
 import flagHungary from '@/assets/ui/flag-hungary.svg';
 import flagGermany from '@/assets/ui/flag-germany.svg';
+import { OrderStat } from '@/components/sections/OrderStat';
+import { CountrySelect } from '@/components/inputs/CountrySelect';
+
+const orderStats = [
+    {
+        value: "4,000+",
+        label: "Happy customers worldwide",
+        description: "More than 4,000 shoppers trust us to deliver their international orders safely and on time.",
+    },
+    {
+        value: "600%",
+        label: "On-time delivery success",
+        description: "Our shipments arrive reliably and damage-free backed by delivery guarantee.",
+    },
+    {
+        value: "10+",
+        label: "Global shipping coverage",
+        description: "We forward packages from more than 10 countries to your doorstep.",
+    },
+    {
+        value: "4.9 / 5",
+        label: "Customer satisfaction rating",
+        description: "Our users love our fast support, transparent pricing, and worry-free delivery.",
+    },
+]
 
 export const Orders = () => {
     return (
@@ -14,102 +39,34 @@ export const Orders = () => {
 
             <div className="orders--section-content">
                 <ul className="orders--section-stats">
-                    <li className="orders--section-stat">
-                        <span>
-                            4,000+
-                        </span>
-
-                        <h3>
-                            Happy customers worldwide
-                        </h3>
-
-                        <p>
-                            More than 4,000 shoppers trust us to deliver their international orders safely and on time.
-                        </p>
-                    </li>
-
-                    <li className="orders--section-stat">
-                        <span>
-                            600%
-                        </span>
-
-                        <h3>
-                            On-time delivery success
-                        </h3>
-
-                        <p>
-                            Our shipments arrive reliably and damage-free backed by delivery guarantee.
-                        </p>
-                    </li>
-
-                    <li className="orders--section-stat">
-                        <span>
-                            10+
-                        </span>
-
-                        <h3>
-                            Global shipping coverage
-                        </h3>
-
-                        <p>
-                            We forward packages from more than 10 countries to your doorstep.
-                        </p>
-                    </li>
-
-
-                    <li className="orders--section-stat">
-                        <span>
-                            4.9 / 5
-                        </span>
-
-                        <h3>Customer satisfaction rating</h3>
-
-                        <p>
-                            Our users love our fast support, transparent pricing, and worry-free delivery.
-                        </p>
-                    </li>
+                    {orderStats.map((stat, index) => (
+                        <OrderStat
+                            key={index}
+                            value={stat.value}
+                            label={stat.label}
+                            description={stat.description}
+                        />
+                    ))}
                 </ul>
 
                 <div className="orders--section-form">
-                    <div className="custom--select">
-                        <label htmlFor="based">I’m based in</label>
+                    <CountrySelect
+                            id="based"
+                            label="I’m based in"
+                            flagSrc={flagHungary}
+                            countryName="Hungary"
+                            countryCode="HU"
+                            hint="We will deliver your parcel near you"
+                        />
 
-                        <div className="relative">
-                            <div className="pointer-events-none absolute left-2 top-1/2 -translate-y-1/2 flex h-[24] w-[34px] items-center justify-center rounded border border-gray-200 bg-gray-50 p-1.5 mr-2">
-                                <img
-                                    src={flagHungary}
-                                    alt="Hungary"
-                                    className="h-full w-full"
-                                />
-                            </div>
-
-                            <select id="based" name="based" className="pl-12">
-                                <option value="HU">Hungary</option>
-                            </select>
-                        </div>
-
-                        <span className="hint">We will deliver your parcel near you</span>
-                    </div>
-
-                    <div className="custom--select">
-                        <label htmlFor="from">My parcel from</label>
-
-                        <div className="relative">
-                            <div className="pointer-events-none absolute left-2 top-1/2 -translate-y-1/2 flex h-[24] w-[34px] items-center justify-center rounded border border-gray-200 bg-gray-50 p-1.5 mr-2">
-                                <img
-                                    src={flagGermany}
-                                    alt="Germany"
-                                    className="h-full w-full"
-                                />
-                            </div>
-
-                            <select name="from" className="pl-12">
-                                <option value="DE">Germany</option>
-                            </select>
-                        </div>
-
-                        <span className="hint">We are working together with most of the providers</span>
-                    </div>
+                        <CountrySelect
+                            id="from"
+                            label="My parcel from"
+                            flagSrc={flagGermany}
+                            countryName="Germany"
+                            countryCode="DE"
+                            hint="We are working together with most of the providers"
+                        />
 
                     <button className="button--primary">
                         Start the journey
