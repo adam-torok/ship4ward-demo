@@ -1,15 +1,19 @@
 .buttons--container {
-	@apply flex gap-5;
+	@apply flex flex-column md:flex-row gap-2 md:gap-5;
+
+	.button--primary, .button--secondary{
+		@apply w-full;
+	}
 }
 
 .button--primary {
-	@apply bg-[var(--primary-color)] font-semibold leading-6 text-[length:var(--border-radius-big)] h-12 w-fit py-3 px-5 text-white rounded-lg flex justify-center items-center hover:ring-orange-200 ring-2 cursor-pointer;
+	@apply bg-[var(--primary-color)] text-center font-semibold leading-6 text-[length:var(--border-radius-big)] h-fit md:h-12 w-fit py-3 px-5 text-white rounded-lg flex justify-center items-center hover:ring-orange-200 ring-2 cursor-pointer;
 
 	&.smaller {
-		@apply h-11;
+		@apply h-fit md:h-11;
 	}
 }
 
 .button--secondary {
-	@apply bg-white font-semibold h-12 border border-[#D5D7DA] text-[var(--text-color-dark)] leading-6 text-[length:var(--border-radius-big)] w-fit py-3 px-5 rounded-lg flex justify-center items-center  hover:ring-orange-200 hover:ring-2 cursor-pointer;
+	@apply bg-white font-semibold h-fit md:h-12 text-center border border-[#D5D7DA] text-[var(--text-color-dark)] leading-6 text-[length:var(--border-radius-big)] w-fit py-3 px-5 rounded-lg flex justify-center items-center  hover:ring-orange-200 hover:ring-2 cursor-pointer;
 }

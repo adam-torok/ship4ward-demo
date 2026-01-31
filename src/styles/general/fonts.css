@@ -5,9 +5,13 @@
 @utility heading {
 	font-family: var(--font-family-base);
 	font-weight: var(--font-weight-semibold);
-	font-size: 60px;
 	line-height: 1;
 	color: inherit;
+	font-size: 36px;
+    @media (min-width: 1024px)
+	{
+		font-size: 60px;
+	}
 }
 
 @utility secondary-heading {

@@ -8,8 +8,10 @@ export const Hero = () => {
             <div className="hero--section-left">
                 <div className="badge badge--primary">
                     <span className="badge--inner">New feature</span>
-                    <span className='badge--text'>Check out the new tracking page</span>
-                    <img src={arrowRight} alt="Arrow right icon" />
+                    <div className='flex'>
+                        <span className='badge--text'>Check out the new tracking page</span>
+                        <img src={arrowRight} alt="Arrow right icon" />
+                    </div>
                 </div>
 
                 <hgroup className="hero--section-content">

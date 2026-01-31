@@ -2,7 +2,7 @@
     @apply flex-center flex-column;
 
     .contact--section-title {
-        @apply wrapper flex-center flex-column mx-auto p-24 text-center;
+        @apply wrapper flex-center flex-column mx-auto p-12 md:p-24 text-center;
 
         span {
             @apply subtext text-[var(--primary-color)] text-center mb-3;

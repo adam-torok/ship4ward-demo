@@ -1,5 +1,5 @@
 .hero--section {
-    @apply wrapper md:grid grid-cols-2 py-[27px] pt-[calc(27px+var(--navbar-height))] px-8 bg-[var(--panel-color)] md:max-h-[calc(579px-80px)];
+    @apply wrapper md:grid grid-cols-2 py-[27px] pt-[calc(27px+var(--navbar-height))] px-8 bg-[var(--panel-color)] max-h-none lg:max-h-[calc(579px-80px)];
 
     .hero--section-content {
         @apply flex flex-col gap-5;
@@ -18,8 +18,7 @@
     }
 
     .hero--section-right {
-        @apply hidden md:flex md:relative flex h-[484px] bg-[url('@/assets/ui/dots.png')];
-
+        @apply hidden lg:flex md:relative flex h-[484px] bg-[url('@/assets/ui/dots.png')];
 
         #image-boy {
             @apply  md:absolute md:left-30;

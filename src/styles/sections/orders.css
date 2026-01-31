@@ -6,7 +6,7 @@
     }
 
     .orders--section-stats {
-        @apply grid grid-cols-2 gap-4 lg:gap-8 text-center;
+        @apply grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 text-center;
     }
 
     .orders--section-stat {
