@@ -1,73 +1,42 @@
-# React + TypeScript + Vite
+# Ship4ward - Landing Page Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern, teljesen reszponzív React alapú landing oldal a képzeletbeli Ship4ward csomagküldő szolgáltatás számára.
 
-Currently, two official plugins are available:
+![Status](https://img.shields.io/badge/Status-In%20Development-orange)
+![Tech](https://img.shields.io/badge/Built%20with-React%20%2B%20Vite-blue)
+![Style](https://img.shields.io/badge/Styling-Tailwind%20CSS%20v4-38bdf8)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Stack
 
-## React Compiler
+- **Framework:** React 18 + Vite
+- **Nyelv:** TypeScript (Szigorú típusosság a props és children elemeknél)
+- **Stílus:** Tailwind CSS v4 (CSS Variables, `@apply` direktívák, BEM)
+- **Design:** Mobile-First megközelítés
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Architektúra
+- **Layout Pattern:** Globális `Layout` komponens (`Navbar` + `Footer` wrapper), ami minden oldalon biztosítja a konzisztens megjelenést.
+- **Project Structure:** A fájlok logikus mappaszerkezetbe rendezve (`components/common`, `components/sections`, `components/ui`).
 
-## Expanding the ESLint configuration
+## Telepítési útmutató
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Töltsd le a forráskódot a GitHubról a saját gépedre:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. git clone [https://github.com/adam-torok/ship4ward-demo.git](https://github.com/adam-torok/ship4ward-demo.git)
+2. cd ship4ward-demo
+3. npm install
+4. npm run dev
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Projekt Struktúra
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```bash
+src/
+├── assets/             # Képek, logók, ikonok
+├── components/
+│   ├── common/         # Navbar, Footer
+│   ├── layout/         # Layout wrapper
+│   ├── sections/       # Hero, Orders, Faq, Logos (Landing oldal részei)
+│   └── ui/             # Kisebb UI elemek (pl. CountrySelect, OrderStat)
+├── App.tsx             # Fő belépési pont
+├── index.css           # Tailwind beállítások és CSS változók
+└── main.tsx            # React DOM renderelés
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
