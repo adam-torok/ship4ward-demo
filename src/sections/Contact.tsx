@@ -1,4 +1,4 @@
-import mapImage from '@/assets/ui/map.png';
+import mapImage from '@/assets/ui/map.svg';
 
 export const Contact = () => {
     return (

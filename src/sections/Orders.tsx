@@ -1,7 +1,7 @@
 import flagHungary from '@/assets/ui/flag-hungary.svg';
 import flagGermany from '@/assets/ui/flag-germany.svg';
-import { OrderStat } from '@/components/sections/OrderStat';
-import { CountrySelect } from '@/components/inputs/CountrySelect';
+import { OrderStat } from '../components/sections/OrderStat';
+import { CountrySelect } from '../components/inputs/CountrySelect';
 
 const orderStats = [
     {

@@ -26,7 +26,7 @@ export const Navbar = () => {
             <nav className="header--nav">
                 <div className='header--nav-content'>
                     <div className="header--nav-logo">
-                        <img src={logo} alt="SHIP4WARD" />
+                        <img width="32px" height="auto" src={logo} alt="SHIP4WARD" />
                     </div>
 
                     <ul className="header--nav-items">

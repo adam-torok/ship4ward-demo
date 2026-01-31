@@ -1,4 +1,4 @@
-import { FaqItem } from "@/components/sections/FaqItem";
+import { FaqItem } from "../components/sections/FaqItem";
 
 const faqData = [
     {

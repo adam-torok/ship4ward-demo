@@ -1,5 +1,5 @@
 import logo from '@/assets/ui/ship4ward-logo.svg';
-import { FooterItem } from '@/components/common/FooterItem';
+import { FooterItem } from './FooterItem';
 
 const footerData = [
     {

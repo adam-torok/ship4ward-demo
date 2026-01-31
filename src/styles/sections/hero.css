@@ -18,7 +18,7 @@
 	}
 
 	.hero--section-right {
-		@apply hidden lg:flex md:relative flex h-[484px] bg-[url('@/assets/ui/dots.png')];
+		@apply hidden lg:flex md:relative flex h-[484px] bg-[url('@/assets/ui/dots.svg')];
 		background-position: -70px -30px;
 		background-repeat: no-repeat;
 		background-size: auto;
